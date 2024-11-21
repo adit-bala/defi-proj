@@ -1,0 +1,23 @@
+{
+  "name": "zk-benchmark",
+  "version": "1.0.0",
+  "description": "Benchmarking zk-co-processors Axiom and Brevis",
+  "main": "benchmark.js",
+  "scripts": {
+    "start": "ganache-cli --host 0.0.0.0 --port 8545",
+    "migrate": "npx truffle migrate --network development",
+    "benchmark": "node benchmark.js",
+    "full-benchmark": "npm run start & sleep 5 && npm run migrate && npm run benchmark"
+  },
+  "dependencies": {
+    "web3": "^1.6.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "truffle": "^5.4.29",
+    "ganache-cli": "^6.12.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
